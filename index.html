@@ -10,43 +10,32 @@
 
 <div id="app">
 
-  <!-- SETUP -->
-  <section id="setup">
-    <h1>1 Year = 5 Years</h1>
+  <!-- TOP NAV -->
+  <nav>
+    <button onclick="showPage('todo')">To-Do</button>
+    <button onclick="showPage('review')">Review</button>
+    <button onclick="showPage('setup')">Setup</button>
+  </nav>
 
-    <input id="objectiveInput" placeholder="Main Objective" />
-
-    <select id="objectiveFrequency">
-      <option>Daily</option>
-      <option>Weekly</option>
-      <option>Custom</option>
-    </select>
-
-    <h3>Leverages</h3>
-    <div id="leverageList"></div>
-
-    <button onclick="addLeverage()">+ Add Leverage</button>
-    <button onclick="startApp()">Start</button>
-  </section>
-
-  <!-- HOME -->
-  <section id="home" class="hidden">
-    <h2 id="objectiveTitle"></h2>
-    <p id="objectiveMeta"></p>
-
-    <div id="executionList"></div>
-
-    <button onclick="endDay()">End Day</button>
-    <button onclick="showReview()">Weekly Review</button>
-  </section>
+  <!-- TO DO -->
+  <section id="todo" class="page"></section>
 
   <!-- REVIEW -->
-  <section id="review" class="hidden">
-    <h2>Weekly Review</h2>
-    <p id="starCount"></p>
+  <section id="review" class="page hidden"></section>
 
-    <button onclick="resetWeek()">Reset Week</button>
-    <button onclick="backHome()">Back</button>
+  <!-- SETUP -->
+  <section id="setup" class="page hidden">
+    <h2>New Objective</h2>
+
+    <input id="objName" placeholder="Objective name" />
+    <select id="objFreq">
+      <option>Daily</option>
+      <option>Weekly</option>
+    </select>
+
+    <div id="leverageInputs"></div>
+    <button onclick="addLeverageInput()">+ Add Leverage</button>
+    <button onclick="saveObjective()">Save Objective</button>
   </section>
 
 </div>
