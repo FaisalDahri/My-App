@@ -56,3 +56,28 @@ body {
   text-align: center;
   margin-top: 24px;
 }
+
+.input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  background: #ddd;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #4f8cff;
+  color: white;
+}
+
+.leverage.setup {
+  flex-direction: column;
+  gap: 8px;
+}
