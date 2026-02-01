@@ -1,41 +1,37 @@
 body {
   margin: 0;
-  background: #0f172a;
-  font-family: system-ui, sans-serif;
-  color: #f8fafc;
+  background: #f7f8fc;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 #app {
   max-width: 390px;
   margin: auto;
   min-height: 100vh;
+  background: #f7f8fc;
   padding-top: 70px;
 }
 
-/* NAV BAR */
-nav {
+/* HEADER */
+header {
   position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #1e293b;
-  border-radius: 999px;
+  top: 0;
+  width: 100%;
+  max-width: 390px;
+  background: #ffffff;
   display: flex;
-  gap: 8px;
-  padding: 6px;
+  justify-content: space-around;
+  padding: 14px 0;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  z-index: 10;
 }
 
-nav button {
+header button {
   background: none;
   border: none;
-  color: #facc15;
-  padding: 8px 14px;
-  border-radius: 999px;
-  cursor: pointer;
-}
-
-nav button:hover {
-  background: #334155;
+  font-weight: 600;
+  color: #b48b3c;
 }
 
 /* PAGES */
@@ -47,41 +43,49 @@ nav button:hover {
   display: none;
 }
 
-/* OBJECTIVE CARD */
+/* OBJECTIVE BUBBLES */
 .objective {
-  background: #1e293b;
-  border-radius: 16px;
-  padding: 14px;
-  margin-bottom: 14px;
-}
-
-.objective h3 {
-  margin: 0;
+  display: inline-block;
+  padding: 10px 16px;
+  margin: 6px;
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   cursor: pointer;
 }
 
-.leverage {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
+/* DROPDOWN */
+.dropdown {
+  margin-top: 12px;
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 18px;
 }
 
-.leverage.done {
-  color: #facc15;
+/* LEVERAGES */
+.leverage {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f1f3f9;
+  border-radius: 14px;
+  margin-bottom: 8px;
 }
 
 /* INPUTS */
 input, select, button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 12px;
-  border-radius: 10px;
+  border-radius: 14px;
   border: none;
 }
 
 button {
-  background: #facc15;
-  color: #0f172a;
-  font-weight: bold;
-  cursor: pointer;
+  background: #f4c95d;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: #e6e9f2;
 }
