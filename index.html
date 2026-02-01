@@ -10,12 +10,12 @@
 
 <div id="app">
 
-  <!-- TOP NAV -->
-  <nav>
+  <!-- TOP BAR -->
+  <header>
     <button onclick="showPage('todo')">To-Do</button>
     <button onclick="showPage('review')">Review</button>
     <button onclick="showPage('setup')">Setup</button>
-  </nav>
+  </header>
 
   <!-- TO DO -->
   <section id="todo" class="page"></section>
@@ -34,7 +34,7 @@
     </select>
 
     <div id="leverageInputs"></div>
-    <button onclick="addLeverageInput()">+ Add Leverage</button>
+    <button class="secondary" onclick="addLeverageInput()">+ Add Leverage</button>
     <button onclick="saveObjective()">Save Objective</button>
   </section>
 
