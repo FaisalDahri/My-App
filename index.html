@@ -8,36 +8,36 @@
 </head>
 <body>
 
-<div id="app">
+<div class="outer">
+  <div id="app">
 
-  <!-- TOP BAR -->
-  <header>
-    <button onclick="showPage('todo')">To-Do</button>
-    <button onclick="showPage('review')">Review</button>
-    <button onclick="showPage('setup')">Setup</button>
-  </header>
+    <header>
+      <button onclick="showPage('todo')">To-Do</button>
+      <button onclick="showPage('review')">Review</button>
+      <button onclick="showPage('setup')">Setup</button>
+    </header>
 
-  <!-- TO DO -->
-  <section id="todo" class="page"></section>
+    <section id="todo" class="page"></section>
+    <section id="review" class="page hidden"></section>
 
-  <!-- REVIEW -->
-  <section id="review" class="page hidden"></section>
+    <section id="setup" class="page hidden">
+      <h2>Add / Edit Objective</h2>
 
-  <!-- SETUP -->
-  <section id="setup" class="page hidden">
-    <h2>New Objective</h2>
+      <input id="objName" placeholder="Objective name">
+      <input id="objDeadline" type="date">
 
-    <input id="objName" placeholder="Objective name" />
-    <select id="objFreq">
-      <option>Daily</option>
-      <option>Weekly</option>
-    </select>
+      <select id="objFreq">
+        <option>Daily</option>
+        <option>Weekly</option>
+      </select>
 
-    <div id="leverageInputs"></div>
-    <button class="secondary" onclick="addLeverageInput()">+ Add Leverage</button>
-    <button onclick="saveObjective()">Save Objective</button>
-  </section>
+      <div id="leverageInputs"></div>
 
+      <button class="secondary" onclick="addLeverageInput()">+ Add Leverage</button>
+      <button onclick="saveObjective()">Save Objective</button>
+    </section>
+
+  </div>
 </div>
 
 <script src="app.js"></script>
