@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>1 Year = 5 Years</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- SETUP -->
+  <section id="setup">
+    <h1>1 Year = 5 Years</h1>
+
+    <input id="objectiveInput" placeholder="Main Objective" />
+
+    <select id="objectiveFrequency">
+      <option>Daily</option>
+      <option>Weekly</option>
+      <option>Custom</option>
+    </select>
+
+    <h3>Leverages</h3>
+    <div id="leverageList"></div>
+
+    <button onclick="addLeverage()">+ Add Leverage</button>
+    <button onclick="startApp()">Start</button>
+  </section>
+
+  <!-- HOME -->
+  <section id="home" class="hidden">
+    <h2 id="objectiveTitle"></h2>
+    <p id="objectiveMeta"></p>
+
+    <div id="executionList"></div>
+
+    <button onclick="endDay()">End Day</button>
+    <button onclick="showReview()">Weekly Review</button>
+  </section>
+
+  <!-- REVIEW -->
+  <section id="review" class="hidden">
+    <h2>Weekly Review</h2>
+    <p id="starCount"></p>
+
+    <button onclick="resetWeek()">Reset Week</button>
+    <button onclick="backHome()">Back</button>
+  </section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
